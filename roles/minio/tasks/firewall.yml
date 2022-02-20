@@ -1,0 +1,19 @@
+---
+- name: install packages
+  apt:
+    name: ufw
+    state: present
+    update_cache: yes
+
+- name: open minio port 9000
+  command: ufw allow 9000/tcp
+
+- name: open minio port 9001
+  command: ufw allow 9001/tcp
+
+- name: enable firewall
+  shell: |
+    set -o pipefail
+    echo "y" | ufw enable
+  args:
+    executable: /bin/bash
