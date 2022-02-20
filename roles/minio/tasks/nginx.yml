@@ -11,8 +11,13 @@
 
 - name: create nginx config for minio
   template:
-    src: nginx.conf.j2
-    dest: '/etc/nginx/sites-enabled/{{ url }}.conf'
+    src: minio.conf.j2
+    dest: '/etc/nginx/sites-enabled/{{ minio_url }}.conf'
+
+- name: create nginx config for snapshots
+  template:
+    src: snapshots.conf.j2
+    dest: '/etc/nginx/sites-enabled/{{ snapshots_url }}.conf'
 
 - name: Start Nginx
   service:
