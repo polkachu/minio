@@ -41,7 +41,7 @@
     dest: '/etc/systemd/system/minio.service'
     owner: root
     group: root
-    mode: 755
+    mode: '0644'
 
 - name: start minio service
   systemd:

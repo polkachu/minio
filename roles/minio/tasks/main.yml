@@ -1,9 +1,9 @@
 ---
 - name: install binary and set up
   import_tasks: minio.yml
-# - name: firewall setup
-#   import_tasks: firewall.yml
-# copy the config file
-# copy systemd file
-# copy nginx file
-# restart nginx
+
+- name: firewall setup
+  import_tasks: firewall.yml
+
+- name: nginx setup
+  import_tasks: nginx.yml
