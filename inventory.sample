@@ -1,5 +1,6 @@
 [minio]
-10.0.0.1 minio_user=USER minio_password=PASSWORD url=URL
+10.0.0.1 minio_user=USER minio_password=PASSWORD minio_url=minio.polkachu.com storage_url=snapshots.polkachu.com
+
 
 [all:vars]
 ansible_user=ubuntu
