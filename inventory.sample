@@ -1,7 +1,6 @@
 [minio]
 10.0.0.1 minio_user=USER minio_password=PASSWORD minio_url=YOUR_MINIO_URL storage_url=YOUR_FILE_URL
 
-
 [all:vars]
 ansible_user=ubuntu
 ansible_port=22
